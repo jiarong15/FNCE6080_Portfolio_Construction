@@ -1,5 +1,7 @@
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import (Mail, From, To, Subject, ReplyTo, Content, MimeType)
+
+from yaml_reader import sendgrid_api_key
 import datetime
 import string
 import random
@@ -33,7 +35,7 @@ def send_email_otp(email_recipients_cleaned, recipient_first_name, code):
     message.reply_to = ReplyTo('ats-analytics@aramcotrading.sg')
     message.content = Content(MimeType.html, html)
 
-    SendGrid_API_key = "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" 
+    SendGrid_API_key = sendgrid_api_key()
     sg = SendGridAPIClient(api_key=SendGrid_API_key)
 
     try:

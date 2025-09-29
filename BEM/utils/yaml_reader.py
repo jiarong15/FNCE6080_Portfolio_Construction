@@ -14,3 +14,7 @@ def vortexa_api_key():
 def signal_api_key():
     secrets = _get_yaml()
     return secrets['SIGNAL_API_KEY']
+
+def sendgrid_api_key():
+    secrets = _get_yaml()
+    return secrets['SENDGRID_API_KEY']
