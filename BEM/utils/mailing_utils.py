@@ -1,7 +1,7 @@
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import (Mail, From, To, Subject, ReplyTo, Content, MimeType)
+from .yaml_reader import sendgrid_api_key
 
-from yaml_reader import sendgrid_api_key
 import datetime
 import string
 import random
